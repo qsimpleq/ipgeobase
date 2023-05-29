@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     ipgeobase (0.1.0)
+      addressable
+      nokogiri-happymapper
 
 GEM
   remote: https://rubygems.org/
@@ -57,14 +59,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  addressable (~> 2.8)
   ipgeobase!
-  minitest (~> 5.0)
-  nokogiri-happymapper (~> 0.9)
+  minitest
+  nokogiri-happymapper
   rake (~> 13.0)
   rubocop (~> 1.21)
   simplecov
-  webmock (~> 3.18)
+  webmock
 
 BUNDLED WITH
    2.4.13
