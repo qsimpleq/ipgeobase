@@ -1,3 +1,5 @@
+[![Ruby](https://github.com/qsimpleq/ipgeobase/actions/workflows/main.yml/badge.svg)](https://github.com/qsimpleq/ipgeobase/actions/workflows/main.yml)
+
 # Ipgeobase
 
 Lookup host info with help of ip-api.com
