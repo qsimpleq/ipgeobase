@@ -1,9 +1,9 @@
-name: Ruby
+name: CI
 
 on:
   push:
     branches:
-      - master
+      - main
 
   pull_request:
 
@@ -23,5 +23,7 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
-    - name: Run the default task
+    - name: Install dependencies
+      run: bundle install
+    - name: Run test and linter
       run: bundle exec rake
