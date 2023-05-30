@@ -8,3 +8,7 @@ require "ipgeobase"
 
 require "minitest/autorun"
 require "webmock/minitest"
+
+def fixture_load(name)
+  File.read "#{File.dirname(__FILE__)}/fixtures/#{name}"
+end
