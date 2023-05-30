@@ -10,16 +10,15 @@ class TestIpgeobase < Minitest::Test
   def test_lookup
     google_ip = "8.8.8.8"
     google_xml = fixture_load("google.xml")
-    uri = Addressable::URI.parse "#{Ipgeobase.api_address}#{google_ip}"
 
-    stub_request(:get, uri)
+    stub_request(:get, "#{Ipgeobase::API_ADDRESS}/#{google_ip}")
       .to_return(status: 200, body: google_xml, headers: { content_type: "application/xml" })
     response = Ipgeobase.lookup(google_ip)
 
-    assert response.city == "Ashburn"
-    assert response.country == "United States"
-    assert response.countryCode == "US"
-    assert response.lat.to_s == 39.03.to_s
-    assert response.lon.to_s == -77.5.to_s
+    expected = { city: "Ashburn", country: "United States", countryCode: "US", lat: 39.03, lon: -77.5 }
+
+    expected.each_key do |key|
+      assert response.send(key) == expected[key], "Wrong value: response.#{key} != #{expected[key]}"
+    end
   end
 end
