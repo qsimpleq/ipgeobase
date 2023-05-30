@@ -5,14 +5,11 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in ipgeobase.gemspec
 gemspec
 
+gem "minitest", "~> 5.0"
 gem "rake", "~> 13.0"
-
-group :development do
-  gem "rubocop", "~> 1.21", require: false
-end
+gem "rubocop", "~> 1.21", require: false
 
 group :test do
-  gem "minitest"
   gem "simplecov", require: false
   gem "webmock"
 end

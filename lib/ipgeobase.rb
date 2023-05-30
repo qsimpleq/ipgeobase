@@ -3,7 +3,7 @@
 require_relative "ipgeobase/version"
 
 require "addressable/uri"
-require "happymapper"
+require "nokogiri-happymapper"
 require "net/http"
 
 # Lookup IP info with help of ip-api.com

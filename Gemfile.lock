@@ -60,8 +60,7 @@ PLATFORMS
 
 DEPENDENCIES
   ipgeobase!
-  minitest
-  nokogiri-happymapper
+  minitest (~> 5.0)
   rake (~> 13.0)
   rubocop (~> 1.21)
   simplecov
