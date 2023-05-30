@@ -14,7 +14,6 @@ module Ipgeobase
   def self.lookup(ip_address)
     uri = Addressable::URI.parse("#{API_ADDRESS}/#{ip_address}")
     http = Net::HTTP.new(uri.host, uri.port)
-
     response = http.get(uri.path)
 
     IpData.parse response.body
