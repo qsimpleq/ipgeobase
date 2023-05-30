@@ -1,20 +1,20 @@
 # frozen_string_literal: true
 
-require_relative "lib/ipgeobase/version"
+require_relative 'lib/ipgeobase/version'
 
 Gem::Specification.new do |spec|
-  spec.name = "ipgeobase"
+  spec.name = 'ipgeobase'
   spec.version = Ipgeobase::VERSION
-  spec.authors = ["Kirill <qsimpleq> Babikhin"]
-  spec.email = ["kirill.babikhin@gmail.com"]
+  spec.authors = ['Kirill <qsimpleq> Babikhin']
+  spec.email = ['kirill.babikhin@gmail.com']
 
-  spec.summary = "Lookup host info with help of ip-api.com"
-  spec.homepage = "https://github.com/qsimpleq/ipgeobase"
-  spec.required_ruby_version = ">= 2.6"
+  spec.summary = 'Lookup host info with help of ip-api.com'
+  spec.homepage = 'https://github.com/qsimpleq/ipgeobase'
+  spec.required_ruby_version = '>= 2.6'
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = spec.homepage
-  spec.metadata["changelog_uri"] = spec.homepage
+  spec.metadata['homepage_uri'] = spec.homepage
+  spec.metadata['source_code_uri'] = spec.homepage
+  spec.metadata['changelog_uri'] = spec.homepage
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -23,10 +23,10 @@ Gem::Specification.new do |spec|
       (File.expand_path(f) == __FILE__) || f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor])
     end
   end
-  spec.bindir = "exe"
+  spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
-  spec.add_dependency "addressable"
-  spec.add_dependency "nokogiri-happymapper"
+  spec.add_dependency 'addressable'
+  spec.add_dependency 'nokogiri-happymapper'
 end
